@@ -1,0 +1,109 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+:root {
+	--font-color: #fff;
+	--font-secondary-color: #fff;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url(view.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	font-family: Ubuntu;
+}
+
+::placeholder {
+	color: var(--font-secondary-color);
+	font-weight: bold;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	row-gap: 1.5rem;
+	align-items: center;
+	width: 550px;
+	padding: 35px 45px;
+	border-radius: 10px;
+	box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+	-webkit-backdrop-filter: blur(5px);
+	backdrop-filter: blur(5px);
+}
+
+.top a {
+	display: inline-block;
+	margin-right: 1.5rem;
+	text-transform: uppercase;
+	text-underline-offset: 5px;
+	color: var(--font-color);
+	font-weight: bold;
+	font-size: 1.5rem;
+}
+
+.top {
+	margin-bottom: 2rem;
+}
+
+.middle,
+.middle input {
+	width: 100%;
+}
+
+.middle input:not(input[type=checkbox]) {
+	font-size: 1.25rem;
+	color: var(--font-color);
+	font-weight: bold;
+	appearance: none;
+	border-color: transparent;
+	background-color: transparent;
+	border-bottom: 2px solid var(--font-color);
+	margin-bottom: 2rem;
+	padding: 7px;
+	caret-color: var(--font-color);
+}
+
+.middle input:not(input[type=checkbox]):focus {
+	outline: none;
+	border-color: transparent;
+	border-bottom-color: lime;
+}
+
+.checkbox>label {
+	font-size: 1.2rem;
+	color: var(--font-color);
+	font-weight: 400;
+}
+
+.checkbox {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+button {
+	appearance: none;
+	color: var(--font-color);
+	font-size: 1.5rem;
+	font-weight: 400;
+	border: none;
+	border-radius: 50vw;
+	padding: 10px 40px;
+	background-color: green;
+	cursor: pointer;
+}
+
+button:active {
+	background-color: limegreen;
+}
